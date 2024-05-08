@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Section</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  .about-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+  .about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .about-section img {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px;
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover;  /* 确保图片覆盖整个区域，但保持比例 */
+    overflow: hidden;   
+
+  }
+  .about-section p {
+    color: #333;
+  }
+
+  /* Additional CSS for Projects Section */
+    .projects-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    }
+    .card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
+    height: 100%;
+    }
+    .card-img-top {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.card-img-top img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: calc(100% - 56.25%); /* 根据图片容器的高度百分比调整 */
+}
+    .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px; 
+    }
+    .card-text {
+    flex-grow: 1; /* 让文字内容占据可用空间，推动按钮到底部 */
+    margin-bottom: 20px; /* 为按钮留出空间 */
+    
+    }
+
+    .btn {
+    margin-top: 10px; /* Ensure margin above buttons */
+    }
+
+
+
+
+/* Additional CSS for Skills Section */
+.skills-section h2 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+.skills-section .card {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.skills-section .card-img-top {
+  padding: 20px; /* Add padding around your images if needed */
+  background-color: #f8f9fa; /* Adjust the background color if your images have transparent areas */
+  height: 180px; /* Fixed height for consistency */
+  object-fit: contain; /* This will make sure the image is scaled properly within the container */
+}
+.skills-section .card-body {
+  padding: 15px;
+}
+.skills-section .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+.skills-section .btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+}
+.skills-section .btn-outline-primary:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Additional CSS for Contact Section */
+.contact-section {
+  padding: 50px 0;
+}
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.social-icon {
+  width: 50px; /* Size of your icons */
+  margin-bottom: 10px;
+}
+/* Hover effect for icons */
+.social-icon:hover {
+  opacity: 0.7;
+}
+/* Style for links in the Contact section */
+.contact-section a {
+  color: #fff;
+  text-decoration: none; /* Removes underline from links */
+  display: inline-block; /* Allows for margin on the bottom */
+  margin-bottom: 10px;
+}
+.contact-section a:hover {
+  color:#ddd; /* Color when hovering over the link */
+}
+
+/* CSS for Sticky Navbar */
+.navbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
+}
+
+/* Ensure padding is added to body to avoid content being hidden behind the navbar */
+body { 
+  padding-top: 56px; /* Adjust this value based on the height of your navbar */
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style for navigation bar links */
+.navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa; /* Slightly lighter white when hovering over links */
+}
+
+/* Media query for responsive navbar collapsing */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: #343a40; /* Same as navbar color for seamless look */
+  }
+}
+
+</style>
+</head>
+<body>
+
+<section class="about-section">
+  <div class="container">
+    <h2>About</h2>
+    <img src="images/about/1.jpg" alt="About Me">
+    <p>My name is Shaoshuai Du.</p>
+    <p>I am currently a PhD student in Netherland.</p>
+  </div>
+</section>
+
+
+
+<!-- Projects Section -->
+<section class="projects-section bg-light" id="projects">
+    <div class="container">
+      <h2 class="text-center">Projects</h2>
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-img-top">
+                <img src="images/projects/1.png"  alt="Project 1">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Evaluation of Dynamic Graph Processing Frameworks</h5>
+              <p class="card-text"> to be continued</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-img-top">
+                <img src="images/projects/2.png" alt="Project 2">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Medical Images Segmentation</h5>
+              <p class="card-text">to be continued.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class = " card-img-top">
+                <img src="images/projects/3.png"  alt="Project 3">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Data Augmentation: Patch Elastic Deformation</h5>
+              <p class="card-text">to be continued.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+<section class="skills-section bg-white" id="skills">
+    <div class="container">
+      <h2 class="text-center">Skills</h2>
+      <div class="row">
+        <!-- Skill 1 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/1.png" class="card-img-top" alt="Python">
+            <div class="card-body">
+              <h5 class="card-title">Python</h5>
+              <p class="card-text"> to be continued</p>
+              <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 2 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/2.png" class="card-img-top" alt="Data Visualization">
+            <div class="card-body">
+              <h5 class="card-title">Java</h5>
+              <p class="card-text"> to be continued</p>
+              <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 3 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/3.png" class="card-img-top" alt="SQL">
+            <div class="card-body">
+              <h5 class="card-title">Pytorch</h5>
+              <p class="card-text">to be continued</p>
+              <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
+            </div>
+          </div>
+        </div>
+        <!-- Skill 4 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/skills/4.jpeg" class="card-img-top" alt="Data Storytelling">
+            <div class="card-body">
+              <h5 class="card-title">C++</h5>
+              <p class="card-text"> to be continued </p>
+              <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+<section class="contact-section text-center text-white bg-dark">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <p><i class="fas fa-envelope"></i> sdu@uva.nl</p>
+        </div>
+        <div class="col-lg-6">
+          <p><i class="fas fa-phone"></i> +31685....</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 col-md-4 mb-4">
+          <a href="https://cn.linkedin.com/in/shaoshuaidu" target="_blank">
+            <img src="icons/2LinkedIn.webp" alt="LinkedIn" class="social-icon">
+            LinkedIn
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4">
+          <a href="https://twitter.com/yourusername" target="_blank">
+            <img src="icons/5X.webp" alt="Twitter" class="social-icon">
+            Twitter
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4">
+          <a href="https://github.com/shaoshuaidu" target="_blank">
+            <img src="icons/1github-logo.png" alt="GitHub" class="social-icon">
+            GitHub
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4">
+          <a href="https://medium.com/@yourusername" target="_blank">
+            <img src="icons/3medium.png" alt="Medium" class="social-icon">
+            Medium
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4">
+          <a href="https://scholar.google.com" target="_blank">
+            <img src="icons/4GoogleScholar.webp" alt="GoogleScholar" class="social-icon">
+            GoogleScholar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">ShaoshuaiDu's Page</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Bootstrap JS and dependencies (jQuery and Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> 
